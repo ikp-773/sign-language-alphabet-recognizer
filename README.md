@@ -15,6 +15,7 @@ You can [find the demo here](https://youtu.be/kBw-xGEIYhY)
 ## Requirements
 
 This project uses python 3.5 and the PIP following packages:
+
 * opencv
 * tensorflow
 * matplotlib
@@ -23,17 +24,22 @@ This project uses python 3.5 and the PIP following packages:
 See requirements.txt and Dockerfile for versions and required APT packages
 
 ### Using Docker
+
 ```
 docker build -t hands-classifier .
 docker run -it hands-classifier bash
 ```
+
 ### Install using PIP
+
 ```
 pip3 install -r requirements.txt
 ```
+
 ## Training
 
 To train the model, use the following command (see framework github link for more command options):
+
 ```
 python3 train.py \
   --bottleneck_dir=logs/bottlenecks \
@@ -44,11 +50,13 @@ python3 train.py \
   --output_labels=logs/trained_labels.txt \
   --image_dir=./dataset
 ```
+
 If you're using the provided dataset, it may take up to three hours.
-  
+
 ## Classifying
-  
+
 To test classification, use the following command:
+
 ```
 python3 classify.py path/to/image.jpg
 ```
@@ -56,7 +64,9 @@ python3 classify.py path/to/image.jpg
 ## Using webcam (demo)
 
 To use webcam, use the following command:
+
 ```
 python3 classify_webcam.py
 ```
+
 Your hand must be inside the rectangle. Keep position to write word, see demo for deletions.

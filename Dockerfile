@@ -15,4 +15,4 @@ ADD classify.py /handstracker
 ADD classify_webcam.py /handstracker
 COPY dataset /handstracker/dataset/
 
-RUN pip3 install -r requirements.txt
+# RUN pip3 install -r requirements.txt

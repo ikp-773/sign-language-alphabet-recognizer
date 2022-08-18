@@ -8,11 +8,9 @@ import copy
 import cv2
 
 # Disable tensorflow compilation warnings
-os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 import tensorflow as tf
 
 def predict(image_data):
-
     predictions = sess.run(softmax_tensor, \
              {'DecodeJpeg/contents:0': image_data})
 
